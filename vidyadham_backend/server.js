@@ -22,7 +22,9 @@ app.use('/api/teachers', teacherRoutes);
 app.get('/api/health', (req, res) => {
   res.json({ status: 'ok', timestamp: new Date().toISOString() });
 });
-
+app.get('/', (req, res) => {
+  res.send('Welcome to Vidyadham Backend API');
+});
 // Connect to DB and start server
 connectDB().then(() => {
   app.listen(PORT, () => {
