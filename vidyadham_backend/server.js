@@ -4,6 +4,10 @@ import dotenv from 'dotenv';
 import connectDB from './config/db.js';
 import authRoutes from './routes/auth.js';
 import teacherRoutes from './routes/teacher.js';
+import driverRoutes from './routes/driver.js';
+import vehicleRoutes from './routes/vehicle.js';
+import chatRoutes from './routes/chat.js';
+import teacherAssistantRoutes from './routes/teacherAssistant.js';
 
 dotenv.config();
 
@@ -17,6 +21,10 @@ app.use(express.json());
 // Routes
 app.use('/api/auth', authRoutes);
 app.use('/api/teachers', teacherRoutes);
+app.use('/api/drivers', driverRoutes);
+app.use('/api/vehicles', vehicleRoutes);
+app.use('/api/chat', chatRoutes);
+app.use('/api/teacher-assistant', teacherAssistantRoutes);
 
 // Health check
 app.get('/api/health', (req, res) => {

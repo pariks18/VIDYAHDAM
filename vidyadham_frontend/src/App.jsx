@@ -4,6 +4,7 @@ import Dashboard from './pages/Dashboard';
 import AddTeacher from './pages/AddTeacher';
 import AddDriver from './pages/AddDriver';
 import AddVehicle from './pages/AddVehicle';
+import TeacherAssistant from './pages/TeacherAssistant';
 import ProtectedRoute from './components/ProtectedRoute';
 import './App.css';
 
@@ -41,6 +42,14 @@ function App() {
           element={
             <ProtectedRoute>
               <AddVehicle />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/teacher-assistant"
+          element={
+            <ProtectedRoute>
+              <TeacherAssistant />
             </ProtectedRoute>
           }
         />

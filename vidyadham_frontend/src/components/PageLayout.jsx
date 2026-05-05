@@ -1,4 +1,5 @@
 import Sidebar from './Sidebar';
+import Chatbot from './Chatbot';
 import './PageLayout.css';
 
 function PageLayout({ children }) {
@@ -8,6 +9,7 @@ function PageLayout({ children }) {
       <main className="page-main">
         {children}
       </main>
+      <Chatbot />
     </div>
   );
 }

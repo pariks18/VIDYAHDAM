@@ -25,10 +25,24 @@ const teacherSchema = new mongoose.Schema(
       trim: true,
       default: '',
     },
+    subjects: {
+      type: [String],
+      default: [],
+    },
     phone: {
       type: String,
       trim: true,
       default: '',
+    },
+    availability: {
+      days: {
+        type: [String],
+        default: [],
+      },
+      timeSlot: {
+        from: { type: String, default: '' },
+        to: { type: String, default: '' },
+      },
     },
     isActive: {
       type: Boolean,

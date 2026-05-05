@@ -10,7 +10,7 @@ router.use(protect);
 // POST /api/teachers — Create a new teacher
 router.post('/', async (req, res) => {
   try {
-    const { name, email, password, subject, phone } = req.body;
+    const { name, email, password, subject, subjects, phone, availability } = req.body;
 
     if (!name || !email || !password) {
       return res.status(400).json({ message: 'Name, email, and password are required' });
@@ -26,8 +26,10 @@ router.post('/', async (req, res) => {
       name,
       email: email.toLowerCase(),
       password,
-      subject: subject || '',
+      subject: subject || subjects?.[0] || '',
+      subjects: Array.isArray(subjects) ? subjects : subject ? [subject] : [],
       phone: phone || '',
+      availability: availability || undefined,
     });
 
     res.status(201).json({

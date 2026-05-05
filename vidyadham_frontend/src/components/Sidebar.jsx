@@ -63,6 +63,16 @@ function Sidebar() {
         </svg>
       ),
     },
+    {
+      id: 'teacher-assistant',
+      label: 'Teacher Assistant',
+      path: '/teacher-assistant',
+      icon: (
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+          <path d="M12 2a4.5 4.5 0 00-4.5 4.5c0 1.657.896 3.105 2.232 3.888L9 12l-1.5 2 1 1.5L7 18l1 2h8l1-2-1.5-2.5 1-1.5L15 12l-.732-1.612A4.5 4.5 0 0016.5 6.5 4.5 4.5 0 0012 2z" />
+        </svg>
+      ),
+    },
   ];
 
   return (

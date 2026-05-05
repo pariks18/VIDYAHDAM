@@ -7,7 +7,7 @@ export default defineConfig({
   server: {
     proxy: {
       '/api': {
-        target: 'https://vidyahdam-backend.onrender.com',
+        target: 'http://localhost:5009',
         changeOrigin: true,
       },
     },
